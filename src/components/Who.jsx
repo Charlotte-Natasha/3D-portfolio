@@ -1,11 +1,16 @@
+import { styled } from "styled-components";
 
+const Section = styled.div`
+    height: 100vh;
+    background-color: purple;
+`;
 
 const Who = () => {
     return (
-        <div>
-        
-        </div>
-    )
-}
+    <Section>
+        Who
+    </Section>
+    );
+};
 
-export default Who
+export default Who;
