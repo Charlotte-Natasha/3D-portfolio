@@ -20,28 +20,62 @@ const Container = styled.div`
 `;
 
 const Left = styled.div`
-    
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
 `;
-const Title = styled.h1``;
+const Title = styled.h1`
+    font-size: 74px;
+`;
 
-const WhoIAm = styled.div``;
+const WhoIAm = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 10px
+`;
 
 const StyledGifts = styled(Gifts)`
-    width: 20px;
-    color: green;
+    width: 40px;
+    color: #631636;
 `;
 
-const Subtitle = styled.h2``;
+const Subtitle = styled.h2`
+    color: #d8a557;
+`;
 
-const Description = styled.p``;
+const Description = styled.p`
+    font-size: 24px;
+    color: lightgray;
+`;
 
-const Button = styled.button``;
+const Button = styled.button`
+    background-color: #631636;
+    border-radius: 50px; 
+    border: none;
+    color: white;
+    width: 150px;
+    padding: 10px;
+    cursor: pointer;
+`;
 
 const Right = styled.div`
-    
+    flex: 3;
+    position: relative;
 `;
 
-const Img = styled.img``;
+const Img = styled.img`
+    border-radius: 50%;
+    height: 70vh;
+    object-fit: contain;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+`;
 
 const Hero = () => {
     return (
@@ -57,7 +91,7 @@ const Hero = () => {
                     <Subtitle>Get to know me.</Subtitle>
                 </WhoIAm>
                 <Description> 
-                    Spend time with. I am not exposing all my secrets. But I am fun I promise. 
+                    Spend time with me alaa. I am not exposing all my secrets. But I am fun I promise. 
                 </Description>
                 <Button> Moving On. </Button>
             </Left>
