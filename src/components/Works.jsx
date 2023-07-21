@@ -1,5 +1,13 @@
 import { styled } from "styled-components";
 
+const data = [
+    "Books",
+    "Perfume",
+    "Flowers",
+    "A job",
+    "Surprise me"
+];
+
 const Section = styled.div`
     height: 100vh;
     scroll-snap-align: center;
@@ -8,18 +16,31 @@ const Section = styled.div`
 `;
 
 const Container= styled.div`
-    width: 1400;
+    width: 1400px;
     display: flex;
     justify-content: space-between;
 `;
 
 const Left = styled.div`
     flex: 1;
+    display: flex;
+    align-items: center;
 `;
 
-const List = styled.ul``;
+const List = styled.ul`
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+`;
 
-const ListItem = styled.li``;
+const ListItem = styled.li`
+    font-size: 90px;
+    font-weight: bold;
+    cursor: pointer;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+`;
 
 const Right = styled.div`
     flex: 1;
@@ -27,16 +48,20 @@ const Right = styled.div`
 
 const Works = () => {
     return (
-    <Section>
-        <Container>
+        <Section>
+            <Container>
             <Left>
                 <List>
-                    <ListItem></ListItem>
+                {data.map((item) => (
+                    <ListItem key={item}>
+                        {item}
+                    </ListItem>
+                ))}
                 </List>
             </Left>
             <Right></Right>
-        </Container>
-    </Section>
+            </Container>
+        </Section>
     );
 };
 
