@@ -19,3 +19,5 @@ npm run dev
 ### Packages installed 
 
 npm install styled-components
+
+npm install styled-icons --save
