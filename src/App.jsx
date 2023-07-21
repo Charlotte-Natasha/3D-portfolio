@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import Pay from './components/Pay'
 import Who from './components/Who'
 import Works from './components/Works'
+import ContactMe from './components/ContactMe'
 
 const Container = styled.div `
   height: 100vh;
@@ -24,6 +25,7 @@ function App() {
       <Hero/>
       <Who/>
       <Works/>
+      <ContactMe/>
       <Pay/>
     </Container>
   )
