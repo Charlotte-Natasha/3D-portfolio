@@ -17,11 +17,12 @@ const Left = styled.div`
     flex: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 `;
 
 const Title = styled.h1`
     font-weight: bold;
+    text-align: center;
 `;
 
 const Form = styled.form`
@@ -34,13 +35,26 @@ const Form = styled.form`
 const Input = styled.input`
     padding: 10px;
     background-color: #fef3ea;
+    border: none;
+    border-radius: 10px;
 `;
 
 const TextArea = styled.textarea`
     padding: 20px;
+    background-color: #fef3ea;
+    border: none;
+    border-radius: 10px;
 `;
 
-const Button = styled.button ``
+const Button = styled.button`
+    padding: 10px;
+    background-color: #631636;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+`;
 
 const Right = styled.div`
     flex: 1;
@@ -55,7 +69,7 @@ const ContactMe = () => {
                 <Title>Humor me!!</Title>
                 <Input placeholder="Your Name or Nickname" />
                 <Input placeholder="Email of course" />
-                <TextArea placeholder="Pour out your soul"/>
+                <TextArea placeholder="Pour out your soul" rows={10}/>
                 <Button>Finally!!</Button>
                 </Form>
             </Left>
