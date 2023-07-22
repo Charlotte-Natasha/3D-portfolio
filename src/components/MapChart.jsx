@@ -15,12 +15,13 @@ const MapChart = () => {
                 center: [-5, -3],
                 scale: 1100,
             }}
+            style={{ width: "100%", height: "100%" }}
         >
             <ZoomableGroup>
                 <Geographies
                     geography="/features.json"
-                    fill="#D6D6DA"
-                    stroke="#FFFFFF"
+                    fill="#fff"
+                    stroke="#3D5312"
                     strokeWidth={0.5}
                 >
                     {({ geographies }) =>
@@ -34,7 +35,7 @@ const MapChart = () => {
                     dx={-90}
                     dy={-30}
                     connectorProps={{
-                        stroke: "#FF5533",
+                        stroke: "#631636",
                         strokeWidth: 3,
                         strokeLinecap: "round",
                     }}
@@ -43,9 +44,9 @@ const MapChart = () => {
                         x="-8"
                         textAnchor="end"
                         alignmentBaseline="middle"
-                        fill="#F53"
+                        fill="#631636"
                     >
-                        {"Paris"}
+                        {"Montpellier"}
                     </text>
                 </Annotation>
             </ZoomableGroup>
