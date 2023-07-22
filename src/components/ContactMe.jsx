@@ -61,17 +61,21 @@ const Right = styled.div`
     flex: 1;
 `;
 
+const handleSubmit = (e) => {
+    e.preventDefault()
+}
+
 const ContactMe = () => {
     return (
         <Section>
             <Container>
             <Left>
-                <Form>
+                <Form onSubmit={handleSubmit}>
                 <Title>Humor me!!</Title>
                 <Input placeholder="Your Name or Nickname" />
                 <Input placeholder="Email of course" />
                 <TextArea placeholder="Pour out your soul" rows={10}/>
-                <Button>Finally!!</Button>
+                <Button type="submit">Finally!!</Button>
                 </Form>
             </Left>
             <Right>
