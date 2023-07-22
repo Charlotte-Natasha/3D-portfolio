@@ -20,8 +20,8 @@ const MapChart = () => {
             <ZoomableGroup>
                 <Geographies
                     geography="/features.json"
-                    fill="#fff"
-                    stroke="#3D5312"
+                    fill="#1d1d46"
+                    stroke="#e5e5e5"
                     strokeWidth={0.5}
                 >
                     {({ geographies }) =>

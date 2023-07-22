@@ -1,12 +1,14 @@
-import { styled } from "styled-components"
+import { useRef, useState } from "react";
+import { styled } from "styled-components";
 import MapChart from "./MapChart";
+import emailjs from "@emailjs/browser";
 
-const Section = styled.div `
+const Section = styled.div`
     height: 100vh;
     scroll-snap-align: center;
 `
 
-const Container = styled.div `
+const Container = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
@@ -61,28 +63,66 @@ const Right = styled.div`
     flex: 1;
 `;
 
-const handleSubmit = (e) => {
-    e.preventDefault()
-}
-
 const ContactMe = () => {
+    const ref = useRef();
+    const [success, setSuccess] = useState(null);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        emailjs
+          .sendForm(
+            "YOUR_SERVICE_ID",
+            "YOUR_TEMPLATE_ID",
+            ref.current,
+            "YOUR_PUBLIC_KEY"
+          )
+          .then(
+            (result) => {
+              console.log(result.text);
+              setSuccess(true);
+            },
+            (error) => {
+              console.log(error.text);
+              setSuccess(false);
+            }
+          );
+    };
     return (
-        <Section>
-            <Container>
-            <Left>
-                <Form onSubmit={handleSubmit}>
-                <Title>Humor me!!</Title>
-                <Input placeholder="Your Name or Nickname" />
-                <Input placeholder="Email of course" />
-                <TextArea placeholder="Pour out your soul" rows={10}/>
-                <Button type="submit">Finally!!</Button>
-                </Form>
-            </Left>
-            <Right>
-                <MapChart/>
-            </Right>
-            </Container>
-        </Section>
+      <Section>
+        <Container>
+          <Left>
+            <Form ref={ref} onSubmit={handleSubmit}>
+              <Title>Humor me!!</Title>
+              <Input
+                placeholder="Your Name or Nickname"
+                name="name"
+                type="name"
+                id="name"
+                autoComplete="name"
+              />
+              <Input
+                placeholder="Email of course"
+                name="email"
+                type="email"
+                id="email"
+                autoComplete="email"
+              />
+              <TextArea
+                placeholder="Pour out your soul"
+                rows={10}
+                name="message"
+              />
+              <Button type="submit">Finally!!</Button>
+              {success &&
+                "Message sent. I might get back to you, I might not. Thankyou for the message though. I appreciate you taking your time :)"}
+            </Form>
+          </Left>
+          <Right>
+            <MapChart />
+          </Right>
+        </Container>
+      </Section>
     );
 }
 
