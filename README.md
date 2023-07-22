@@ -21,3 +21,5 @@ npm run dev
 npm install styled-components
 
 npm install styled-icons --save
+
+npm i -S react-simple-maps
