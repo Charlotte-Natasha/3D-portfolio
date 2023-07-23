@@ -27,3 +27,11 @@ npm i -S react-simple-maps
 npm install @emailjs/browser --save
 
 npm i @react-three/fiber @react-three/drei three
+
+(sudo) npm install -g gltf-pipeline
+
+### Converting a glTF to Draco glTF
+
+gltf-pipeline -i model.gltf -o modelDraco.gltf -d
+
+npx gltfjsx model.gltf --transform
