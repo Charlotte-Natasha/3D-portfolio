@@ -1,6 +1,5 @@
 import { styled } from 'styled-components'
 import Hero from './components/Hero'
-import Pay from './components/Pay'
 import Who from './components/Who'
 import Works from './components/Works'
 import ContactMe from './components/ContactMe'
@@ -26,7 +25,6 @@ function App() {
       <Who/>
       <Works/>
       <ContactMe/>
-      <Pay/>
     </Container>
   )
 }

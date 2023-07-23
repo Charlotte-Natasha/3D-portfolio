@@ -25,3 +25,5 @@ npm install styled-icons --save
 npm i -S react-simple-maps
 
 npm install @emailjs/browser --save
+
+npm i @react-three/fiber @react-three/drei three
