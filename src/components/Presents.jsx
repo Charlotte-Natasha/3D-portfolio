@@ -1,7 +1,13 @@
+import { useState } from "react";
 import { styled, keyframes } from "styled-components";
+import Novels from "./Novels";
+import Perfume from "./Perfume";
+import Flowers from "./Flowers";
+import Job from "./Job";
+import Surprise from "./Surprise";
 
 const data = [
-    "Books",
+    "Novels",
     "Perfume",
     "Flowers",
     "A job",
@@ -15,7 +21,7 @@ const Section = styled.div`
     justify-content: center;
 `;
 
-const Container= styled.div`
+const Container = styled.div`
     width: 1400px;
     display: flex;
     justify-content: space-between;
@@ -70,23 +76,40 @@ const Right = styled.div`
     flex: 1;
 `;
 
-const Works = () => {
+const Presents = () => {
+    const [present, setPresent] = useState("Novels")
     return (
         <Section>
             <Container>
-            <Left>
-                <List>
-                {data.map((item) => (
-                    <ListItem key={item} text={item}>
-                        {item}
-                    </ListItem>
-                ))}
-                </List>
-            </Left>
-            <Right></Right>
+                <Left>
+                    <List>
+                        {data.map((item) => (
+                            <ListItem
+                                key={item}
+                                text={item}
+                                onClick={() => setPresent(item)}
+                            >
+                                {item}
+                            </ListItem>
+                        ))}
+                    </List>
+                </Left>
+                <Right>
+                    {present === "Novels" ? (
+                        <Novels />
+                    ) : present === "Perfume" ? (
+                        <Perfume />
+                    ) : present === "Flowers" ? (
+                        <Flowers />
+                    ) : present === "Job" ? (
+                        <Job />
+                    ) : (
+                        <Surprise />
+                    )}
+                </Right>
             </Container>
         </Section>
     );
 };
 
-export default Works;
+export default Presents;

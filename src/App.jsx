@@ -1,7 +1,7 @@
 import { styled } from 'styled-components'
 import Hero from './components/Hero'
 import Who from './components/Who'
-import Works from './components/Works'
+import Presents from './components/Presents'
 import ContactMe from './components/ContactMe'
 
 const Container = styled.div `
@@ -23,7 +23,7 @@ function App() {
     <Container>
       <Hero/>
       <Who/>
-      <Works/>
+      <Presents/>
       <ContactMe/>
     </Container>
   )

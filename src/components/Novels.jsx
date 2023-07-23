@@ -1,6 +1,6 @@
 
 
-const Books = () => {
+const Novels = () => {
   return (
     <div>
       
@@ -8,4 +8,5 @@ const Books = () => {
   )
 }
 
-export default Books
+export default Novels
+
