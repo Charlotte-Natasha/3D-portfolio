@@ -1,6 +1,8 @@
 import { styled } from "styled-components";
 import Navbar from "./Navbar";
 import { Gifts } from "@styled-icons/fa-solid/Gifts";
+import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 
 const Section = styled.div`
     height: 100vh;
@@ -86,28 +88,41 @@ const Img = styled.img`
 
 const Hero = () => {
     return (
-    <Section>
-        <Navbar/>
+      <Section>
+        <Navbar />
         <Container>
-            <Left>
-                <Title>
-                    Memories, Gifts, Words.
-                </Title>
-                <WhoIAm>
-                    <StyledGifts/>
-                    <Subtitle>Get to know me.</Subtitle>
-                </WhoIAm>
-                <Description> 
-                    Spend time with me alaa. I am not exposing all my secrets. But I am fun I promise. 
-                </Description>
-                <Button> Moving On. </Button>
-            </Left>
-            <Right>
-                {/* 3d Model */}
-                <Img src="./img/toon1.jpeg"/>
-            </Right>
+          <Left>
+            <Title>Memories, Gifts, Words.</Title>
+            <WhoIAm>
+              <StyledGifts />
+              <Subtitle>Get to know me.</Subtitle>
+            </WhoIAm>
+            <Description>
+              Spend time with me alaa. I am not exposing all my secrets. But I
+              am fun I promise.
+            </Description>
+            <Button> Moving On. </Button>
+          </Left>
+          <Right>
+            {/* 3d Model */}
+            <Canvas>
+              <OrbitControls enableZoom={false} />
+              <ambientLight intensity={1} />
+              <directionalLight position={[3, 2, 1]} />
+              <Sphere args={[1, 100, 200]} scale={3}>
+                <MeshDistortMaterial
+                  color="#82445e"
+                  attach="material"
+                  distort={0.5}
+                  speed={2}
+                />
+              </Sphere>
+            </Canvas>
+            <Img src="./img/toon3.png" />
+          </Right>
         </Container>
-    </Section>);
+      </Section>
+    );
 };
 
 export default Hero
