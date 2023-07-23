@@ -88,40 +88,40 @@ const Img = styled.img`
 
 const Hero = () => {
     return (
-      <Section>
-        <Navbar />
-        <Container>
-          <Left>
-            <Title>Memories, Gifts, Words.</Title>
-            <WhoIAm>
-              <StyledGifts />
-              <Subtitle>Get to know me.</Subtitle>
-            </WhoIAm>
-            <Description>
-              Spend time with me alaa. I am not exposing all my secrets. But I
-              am fun I promise.
-            </Description>
-            <Button> Moving On. </Button>
-          </Left>
-          <Right>
-            {/* 3d Model */}
-            <Canvas>
-              <OrbitControls enableZoom={false} />
-              <ambientLight intensity={1} />
-              <directionalLight position={[3, 2, 1]} />
-              <Sphere args={[1, 100, 200]} scale={3}>
-                <MeshDistortMaterial
-                  color="#82445e"
-                  attach="material"
-                  distort={0.5}
-                  speed={2}
-                />
-              </Sphere>
-            </Canvas>
-            <Img src="./img/toon3.png" />
-          </Right>
-        </Container>
-      </Section>
+        <Section>
+            <Navbar />
+            <Container>
+                <Left>
+                    <Title>Memories, Gifts, Words.</Title>
+                    <WhoIAm>
+                        <StyledGifts />
+                        <Subtitle>Get to know me.</Subtitle>
+                    </WhoIAm>
+                    <Description>
+                        Spend time with me alaa. I am not exposing all my secrets. But I
+                        am fun I promise.
+                    </Description>
+                    <Button> Moving On. </Button>
+                </Left>
+                <Right>
+                    {/* 3d Model */}
+                    <Canvas>
+                        <OrbitControls enableZoom={false} />
+                        <ambientLight intensity={1} />
+                        <directionalLight position={[3, 2, 1]} />
+                        <Sphere args={[1, 100, 200]} scale={3}>
+                            <MeshDistortMaterial
+                                color="#82445e"
+                                attach="material"
+                                distort={0.5}
+                                speed={2}
+                            />
+                        </Sphere>
+                    </Canvas>
+                    <Img src="./img/toon3.png" />
+                </Right>
+            </Container>
+        </Section>
     );
 };
 
