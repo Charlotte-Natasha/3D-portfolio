@@ -13,7 +13,7 @@ const Model = () => {
     });
     return (
         <mesh>
-            <boxGeometry args={[2, 2, 2]} />
+            <boxGeometry args={[1.5, 1.5, 1.5]} />
             <meshStandardMaterial>
                 <RenderTexture attach="map">
                     <PerspectiveCamera makeDefault position={[0, 0, 25]} />
