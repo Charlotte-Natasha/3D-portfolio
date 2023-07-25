@@ -4,12 +4,14 @@ import Series from "./Series";
 
 const Job = () => {
   return (
-    <Canvas>
-      <Stage environment="city" intensity={0.6}>
-        <Series />
-        <OrbitControls enableZoom={false} />
-      </Stage>
-    </Canvas>
+    <>
+      <Canvas>
+        <Stage environment="city" intensity={0.6}>
+          <Series />
+          <OrbitControls enableZoom={false} />
+        </Stage>
+      </Canvas>
+    </>
   );
 };
 

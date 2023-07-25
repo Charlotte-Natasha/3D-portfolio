@@ -30,6 +30,11 @@ npm i @react-three/fiber @react-three/drei three
 
 (sudo) npm install -g gltf-pipeline
 
+npm install survey-core
+
+npm install survey-react-ui
+
+
 ### Converting a glTF to Draco glTF
 
 gltf-pipeline -i model.gltf -o modelDraco.gltf -d
