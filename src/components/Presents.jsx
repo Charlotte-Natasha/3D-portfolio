@@ -69,7 +69,7 @@ const ListItem = styled.li`
     position: relative;
 
     @media only screen and (max-width: 780px) {
-        font-size: 30px;
+        font-size: 20px;
         color: #fff;
         -webkit-text-stroke: 0px;
     }
