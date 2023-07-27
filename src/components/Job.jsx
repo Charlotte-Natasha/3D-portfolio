@@ -10,7 +10,7 @@ const Desc = styled.div`
   background-color: white;
   border-radius: 10px;
   position: absolute;
-  top: 100px;
+  top: 300px;
   right: 100px;
 `;
 
