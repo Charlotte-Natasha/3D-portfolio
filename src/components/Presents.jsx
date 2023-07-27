@@ -29,6 +29,11 @@ const Container = styled.div`
     width: 1400px;
     display: flex;
     justify-content: space-between;
+
+    @media only screen and (max-width: 780px) {
+        width: 100%;
+        flex-direction: column;
+    }
 `;
 
 const Left = styled.div`
