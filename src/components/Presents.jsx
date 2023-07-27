@@ -41,6 +41,10 @@ const Left = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: 780px) {
+        padding: 20px;
+    }
 `;
 
 const List = styled.ul`
@@ -63,6 +67,12 @@ const ListItem = styled.li`
     color: transparent;
     -webkit-text-stroke: 1px #fff;
     position: relative;
+
+    @media only screen and (max-width: 780px) {
+        font-size: 30px;
+        color: #fff;
+        -webkit-text-stroke: 0px;
+    }
 
     &::after {
         content: ${(props) => `"${props.text}"`};
