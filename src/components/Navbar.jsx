@@ -4,6 +4,10 @@ import { Search } from "@styled-icons/bootstrap/Search";
 const Section = styled.div `
     display: flex;
     justify-content: center;
+
+    @media only screen and (max-width: 780px) {
+        width: 100%;
+    }
 `
 const Container = styled.div`
     width: 1400px;
@@ -11,12 +15,18 @@ const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
+
+    @media only screen and (max-width: 780px) {
+        width: 100%;
+        padding: 9px;
+    }
 `;
 
 const Links = styled.div`
     display: flex;
     align-items: center;
     gap: 50px;
+
 `;
 
 const Logo = styled.img`
@@ -27,6 +37,10 @@ const List = styled.ul`
     display: flex;
     gap: 20px;
     list-style: none;
+
+    @media only screen and (max-width: 780px) {
+        display: none;
+    }
 `;
 
 const ListItem = styled.li`
