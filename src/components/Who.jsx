@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import  styled  from "styled-components";
 import { Gifts } from "@styled-icons/fa-solid/Gifts";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { styled, keyframes } from "styled-components";
+import  styled, { keyframes } from "styled-components";
 import Novels from "./Novels";
 import Perfume from "./Perfume";
 import Flowers from "./Flowers";

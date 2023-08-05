@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { styled } from "styled-components";
+import  styled  from "styled-components";
 import MapChart from "./MapChart";
 import emailjs from "@emailjs/browser";
 

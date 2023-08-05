@@ -1,7 +1,7 @@
 import { OrbitControls, Stage } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Series from "./Series";
-import { styled } from "styled-components";
+import  styled  from "styled-components";
 
 const Desc = styled.div`
   width: 200px;

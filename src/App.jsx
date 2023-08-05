@@ -1,4 +1,4 @@
-import { styled } from 'styled-components'
+import  styled  from 'styled-components'
 import Hero from './components/Hero'
 import Who from './components/Who'
 import Presents from './components/Presents'

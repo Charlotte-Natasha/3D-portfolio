@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import  styled  from "styled-components";
 import Navbar from "./Navbar";
 import { Gifts } from "@styled-icons/fa-solid/Gifts";
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
